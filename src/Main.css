@@ -1,0 +1,52 @@
+.main{
+    font-size: calc(10px + 2vmin);
+}
+.input-group {
+    margin: auto;
+    width: 350px !important ;    
+}
+.input-group  > * {
+    padding: 13px 15px  !important;
+}
+
+.form-control:focus{
+    box-shadow: none !important;
+}
+.goods-card{
+    border: 0px solid white !important;
+}
+.goods-link:hover{
+    cursor: pointer;
+}
+
+.card > img {
+    border-radius: 5px;
+    margin-top: 10px;
+    width:  calc(100% );
+    height: 300px;
+    object-fit: contain;
+}
+
+.row .gap-3 {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.row .gap-3  >  .card{
+    flex-basis: 22%;
+}
+.navbar{
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 105;
+    box-shadow: rgb(0 0 0 / 30%) 0px 0px 20px 0px;
+    background-color: rgb(207, 208, 212);
+}
+.nav-links{
+    border: 0px;
+    background-color: rgb(207, 208, 212);
+}

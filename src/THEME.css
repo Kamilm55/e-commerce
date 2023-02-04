@@ -1,0 +1,31 @@
+.moon {
+    background-color: #f0f0f0;
+    color: #222;
+  }
+.moon .cards {
+    background-color:#fff ;
+  }
+.moon .navbar >* {
+    background-color:rgb(207, 208, 212) ;
+  }
+
+
+  .sun {
+      background-color: #222;
+      color: #fff;
+    }
+  .sun .cards {
+      background-color:#383838 ;
+      color: #fff;
+    }
+  .sun .basketcard {
+      background-color:#383838 ;
+      color: #fff;
+    }
+
+    .sun .navbar  {
+        background-color:#383838  ;
+      }
+    .sun .navbar > *  {
+        background-color:#383838  ;
+      }

@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  /* overflow: hidden; */
+}
+body{
+  font-family: 'Josefin Sans', sans-serif !important; 
+}
+/* body{
+  background-color: rgba(0, 0, 0, 0.094) !important ;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+body::backdrop {
+  background-color: rgb(255, 255, 255);
+} */
+/* .moon{
+  background-color:#fff  !important ;
+}
+.sun{
+  background-color: #222 !important ;
+}
+.sun > h1,h2,h3,h4,h5,h6,p{
+  color: #fff !important;
+}
+.moon > h1,h2,h3,h4,h5,h6,p{
+  color: #222 !important;
+} */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center;
+  justify-content: center; */
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+.inputGroup > input{
+  border-radius: 5px;
+}
+
+.inputGroup > input:focus {
+  outline: none;
+}
+hr{
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+/* p,h1,h2,h3,h6{
+  color: black;
+} */
