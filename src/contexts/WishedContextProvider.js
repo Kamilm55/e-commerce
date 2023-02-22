@@ -24,6 +24,7 @@ function WishedContextProvider({children}) {
   let docRef;
 
   onAuthStateChanged(auth, (user) => {
+    if(user)
      docRef = doc (db , "users" ,user.uid );
     });
 
@@ -37,9 +38,15 @@ function WishedContextProvider({children}) {
               if(basket.filter(basketItem => basketItem.title === copyForBasket.title).length === 0){
                 Object.assign(copyForBasket , {counter:1})
                 if(doc.data().basket){
+                  if(actionType === 'deleteAll'){
+                    await updateDoc( docRef , {
+                              basket:[]
+                            })                  }
+                  else{
                     await updateDoc( docRef ,{  
                       basket:[...doc.data().basket,copyForBasket]
-                  })
+                    }
+                  )}
                   }
                   else{
                     await updateDoc( docRef ,{  
@@ -140,8 +147,9 @@ function WishedContextProvider({children}) {
       return;
       
   onSnapshot(doc(db, "users", auth.currentUser.uid), (doc) => {
-    if(doc.data().wishlist)
-    setAllWished( doc.data().wishlist);
+    if(doc.data().wishlist/*  && doc.data().wishlist !== undefined */){
+      setAllWished( doc.data().wishlist);
+    }
     if(doc.data().basket)
     setBasket(doc.data().basket);
     });

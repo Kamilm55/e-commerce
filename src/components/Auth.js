@@ -16,8 +16,8 @@ function UserContextProvider(props) {
     const [user , setUser] = useState('');
 
     function register(email , password , firstName , lastName){
-       return  createUserWithEmailAndPassword(auth , email , password)
-        //  .then(cred => {
+     return createUserWithEmailAndPassword(auth , email , password)
+      //  .then(cred => {
         //   const newUsersRef =  doc(db, "users",cred.user.uid  );
         //      setDoc(newUsersRef, {
         //     name: `${firstName} ${lastName}`,

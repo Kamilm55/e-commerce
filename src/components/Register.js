@@ -62,6 +62,7 @@ function Register() {
        
        if(valid === true){
        try {
+        console.log(value.email , value.password ,value.firstName , value.lastName);
          await register(value.email , value.password ,value.firstName , value.lastName)
          .then(cred => {
           const newUsersRef =  doc(db, "users",cred.user.uid  );
@@ -69,6 +70,7 @@ function Register() {
             name: `${value.firstName} ${value.lastName}`,
             id:cred.user.uid,
         });
+        console.log(cred);
         setUid(cred.user.uid);
         })
          setErrorMsg('');         

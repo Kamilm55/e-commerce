@@ -9,7 +9,7 @@ function Basket() {
   const [totalCost , setCost] = useState(0);
   const {basket,setBasket } = useWishedContext();
   const toast = useToast();
-  const { isOpenLoading, onOpenLoading,  onCloseLoading } = useWishedContext()
+  const { uploadtoBasket,isOpenLoading, onOpenLoading,  onCloseLoading } = useWishedContext()
   let sum = 0;
 
   useEffect(()=>{
@@ -33,7 +33,10 @@ function Basket() {
         status: 'success',
         duration: 2000,
         isClosable: true,
-      })    }, "1000")
+      })    }, "1000");
+      setTimeout(()=>{
+        uploadtoBasket( '' ,  'deleteAll');
+      },1100)
   }
   return (
     <div>
